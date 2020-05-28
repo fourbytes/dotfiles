@@ -1,0 +1,1 @@
+/home/fourbytes/.fzf/shell/key-bindings.fish

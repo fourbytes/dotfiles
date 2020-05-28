@@ -1,0 +1,7 @@
+workspace W
+exec firefox
+
+workspace TERM
+assign [app_id="tmux"] workspace TERM
+assign [app_id="tmux"] fullscreen enable
+exec alacritty --class tmux -e /bin/bash -l -c "tmux attach || tmux"

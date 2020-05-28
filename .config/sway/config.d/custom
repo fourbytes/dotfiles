@@ -1,0 +1,38 @@
+set $mod Mod4
+set $uifont "SF Pro Display Medium 11"
+
+font pango:SF Pro Display Medium 8
+
+titlebar_border_thickness 0
+titlebar_padding 4
+
+# bindsym $mod+Ctrl+1 append_layout ".config/i3/ly_code.json"
+
+bar {
+	swaybar_command waybar
+}
+
+set $focused #3c1361
+set $focusedI #332244
+set $urgent #ec4040
+set $unfocused #040404
+
+set $menu j4-dmenu-desktop --dmenu='bemenu -i --fn $uifont -l 10 -p " ➡" --nb "$unfocused" --tb "$focused" --fb "$focused"' | xargs swaymsg exec
+
+
+# class                 border   bground  text     indicator child_border
+client.focused          $focused $focused #ffffff $focused $focused
+client.focused_inactive $focusedI $focusedI #ffffff $focusedI  $focusedI
+client.unfocused        $unfocused $unfocused #ffffff $unfocused $unfocused
+client.urgent           $urgent $urgent #ffffff $urgent $urgent
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000 #0C0C0C
+
+client.background       #040404
+
+## Gaps
+# gaps outer 4
+# gaps inner 12
+# smart_gaps on
+# smart_borders on
+
+output DP-3 scale 2 bg $HOME/papers/1.jpg fill
