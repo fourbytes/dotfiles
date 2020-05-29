@@ -57,6 +57,8 @@ window#waybar {
 }
 
 #clock {
+    color: #161821;
+    background-color: #a093c7;
 }
 
 #battery {
