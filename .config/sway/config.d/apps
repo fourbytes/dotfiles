@@ -1,7 +1,14 @@
-workspace W
-exec firefox
+for_window [app_id="term*"] border none
+for_window [app_id="Alacritty"] border none
 
-workspace TERM
-assign [app_id="tmux"] workspace TERM
-assign [app_id="tmux"] fullscreen enable
-exec alacritty --class tmux -e /bin/bash -l -c "tmux attach || tmux"
+workspace "1: term" output DP-3
+assign [app_id="term1"] workspace number 1
+exec alacritty --class term1 -e tmux -L primary
+
+workspace "2: www" output DP-3
+assign [app_id="firefoxdeveloperedition"] workspace "2: www"
+exec firefox-developer-edition --class www
+
+workspace "9: term" output HDMI-A-1
+assign [app_id="term9"] workspace number 9
+exec alacritty --class term9 -e tmux -L right 

@@ -1,7 +1,7 @@
-set -gx fish_user_paths "$HOME/bin" $fish_user_paths  
+# set -gx fish_user_paths "$HOME/bin" $fish_user_paths  
 direnv hook fish | source
 
-test (tty) = '/dev/tty1'; and start_sway;
+# test (tty) = '/dev/tty1'; and start_sway;
 
 # bind \t accept-autosuggestion
 

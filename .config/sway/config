@@ -1,50 +1,37 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
-
 ### Variables
-#
-# Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
 set $uifont "SF Pro Display 14"
-# Your preferred terminal emulator
 set $term alacritty
-# Your preferred application launcher
-# Note: it's recommended that you pass the final command to sway
+
+font $uifont
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+output DP-3 adaptive_sync on
+output DP-3 scale 1.5 bg $HOME/papers/2.jpg fill
+output DP-3 pos 0 0 res 3840x2160
+
+output HDMI-A-1 bg $HOME/papers/2.jpg fill
+output HDMI-A-1 pos 2560 0 res 1920x1080
+
+focus output DP-3
 
 ### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' \
-#               resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w \
+        timeout 300 'swaylock -f ' \
+        timeout 600 'swaymsg "output * dpms off"' \
+             resume 'swaymsg "output * dpms on"' \
+        before-sleep 'swaylock -f '
 
 ### Input configuration
+#
 #
 # Example configuration:
 #
@@ -111,27 +98,27 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace TERM
-    bindsym $mod+2 workspace W
-    bindsym $mod+3 workspace 3
-    bindsym $mod+4 workspace 4
-    bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
-    bindsym $mod+7 workspace 7
-    bindsym $mod+8 workspace 8
-    bindsym $mod+9 workspace 9
-    bindsym $mod+0 workspace 10
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
     # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace TERM
-    bindsym $mod+Shift+2 move container to workspace W
-    bindsym $mod+Shift+3 move container to workspace 3
-    bindsym $mod+Shift+4 move container to workspace 4
-    bindsym $mod+Shift+5 move container to workspace 5
-    bindsym $mod+Shift+6 move container to workspace 6
-    bindsym $mod+Shift+7 move container to workspace 7
-    bindsym $mod+Shift+8 move container to workspace 8
-    bindsym $mod+Shift+9 move container to workspace 9
-    bindsym $mod+Shift+0 move container to workspace 10
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 #
@@ -196,9 +183,36 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
+bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
+# bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
-bindsym $mod+space exec alacritty --config-file ~/.config/alacritty/alacritty_popup.yml --class "fzfmenu" -e fzf_run
-for_window [instance="fzfmenu"] floating enable
+bindsym $mod+space exec alacritty --class fzfmenu --config-file ~/.config/alacritty/alacritty_popup.yml -e fzf_run
+for_window [app_id="fzfmenu"] floating enable, sticky enable, border none
+
+#
+# STYLES
+#
+set $focused #3c1361
+set $focusedI #332244
+set $urgent #ec4040
+set $unfocused #040404
+
+# class                 border   bground  text     indicator child_border
+client.focused          $focused $focused #ffffff $focused $focused
+client.focused_inactive $focusedI $focusedI #ffffff $focusedI  $focusedI
+client.unfocused        $unfocused $unfocused #ffffff $unfocused $unfocused
+client.urgent           $urgent $urgent #ffffff $urgent $urgent
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000 #0C0C0C
+
+client.background       #040404
+
+titlebar_border_thickness 0
+titlebar_padding 4
+
+## Gaps
+# gaps outer 4
+# gaps inner 12
+# smart_gaps on
+# smart_borders on
 
 include $HOME/.config/sway/config.d/*
