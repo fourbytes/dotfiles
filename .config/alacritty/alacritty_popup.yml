@@ -133,34 +133,34 @@ debug:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Blood Moon)
+# Colors (Ayu Mirage)
 colors:
   # Default colors
   primary:
-    background: '#10100E'
-    foreground: '#C6C6C4'
+    background: '#202734'
+    foreground: '#CBCCC6'
 
   # Normal colors
   normal:
-    black:   '#10100E'
-    red:     '#C40233'
-    green:   '#009F6B'
-    yellow:  '#FFD700'
-    blue:    '#0087BD'
-    magenta: '#9A4EAE'
-    cyan:    '#20B2AA'
-    white:   '#C6C6C4'
+    black: '#191E2A'
+    red: '#FF3333'
+    green: '#BAE67E'
+    yellow: '#FFA759'
+    blue: '#73D0FF'
+    magenta: '#FFD580'
+    cyan: '#95E6CB'
+    white: '#C7C7C7'
 
   # Bright colors
   bright:
-    black:   '#696969'
-    red:     '#FF2400'
-    green:   '#03C03C'
-    yellow:  '#FDFF00'
-    blue:    '#007FFF'
-    magenta: '#FF1493'
-    cyan:    '#00CCCC'
-    white:   '#FFFAFA'
+    black: '#686868'
+    red: '#F27983'
+    green: '#A6CC70'
+    yellow: '#FFCC66'
+    blue: '#5CCFE6'
+    magenta: '#FFEE99'
+    cyan: '#95E6CB'
+    white: '#FFFFFF'
 
 # Visual Bell
 #

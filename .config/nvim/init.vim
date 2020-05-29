@@ -52,7 +52,9 @@ Plug 'rust-lang/rust.vim'
 
 " vim themes
 Plug 'morhetz/gruvbox'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'cocopon/iceberg.vim'
+" Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+" Plug 'whatyouhide/vim-gotham'
 
 " ansible plugins
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
@@ -424,8 +426,8 @@ nnoremap <silent> <leader>t :Defx -toggle<cr>
 " Background colors
 let ayucolor="dark"   " for dark version of theme
 let g:gruvbox_contrast_dark="hard"
-colorscheme gruvbox 
-" colorscheme challenger_deep
+" colorscheme gruvbox 
+colorscheme iceberg
 
 " Powerline config
 let g:airline_powerline_fonts = 1

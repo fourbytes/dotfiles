@@ -1,0 +1,10 @@
+### Output configuration
+
+output DP-3 adaptive_sync on
+output DP-3 scale 1.5 bg $paper fill
+output DP-3 pos 0 0 res 3840x2160
+
+output HDMI-A-1 bg $HOME/papers/2.jpg fill
+output HDMI-A-1 pos 2560 0 res 1920x1080
+
+focus output DP-3

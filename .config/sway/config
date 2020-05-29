@@ -7,17 +7,9 @@ set $right l
 set $uifont "SF Pro Display 14"
 set $term alacritty
 
+set $paper $HOME/papers/2.jpg
+
 font $uifont
-
-### Output configuration
-output DP-3 adaptive_sync on
-output DP-3 scale 1.5 bg $HOME/papers/2.jpg fill
-output DP-3 pos 0 0 res 3840x2160
-
-output HDMI-A-1 bg $HOME/papers/2.jpg fill
-output HDMI-A-1 pos 2560 0 res 1920x1080
-
-focus output DP-3
 
 ### Idle configuration
 #
@@ -189,13 +181,14 @@ bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 bindsym $mod+space exec alacritty --class fzfmenu --config-file ~/.config/alacritty/alacritty_popup.yml -e fzf_run
 for_window [app_id="fzfmenu"] floating enable, sticky enable, border none
 
+
 #
 # STYLES
 #
-set $focused #3c1361
-set $focusedI #332244
-set $urgent #ec4040
-set $unfocused #040404
+set $focused #a093c7
+set $focusedI #ada0d3
+set $urgent #e2a478
+set $unfocused #101118
 
 # class                 border   bground  text     indicator child_border
 client.focused          $focused $focused #ffffff $focused $focused
@@ -209,6 +202,8 @@ client.background       #040404
 titlebar_border_thickness 0
 titlebar_padding 4
 
+default_border pixel 3
+
 ## Gaps
 # gaps outer 4
 # gaps inner 12
@@ -216,3 +211,4 @@ titlebar_padding 4
 # smart_borders on
 
 include $HOME/.config/sway/config.d/*
+include $HOME/.config/sway/`hostname`

@@ -1,0 +1,9 @@
+# Outputs
+output eDP-1 scale 2.0 bg $paper fill
+output eDP-1 pos 0 0 res 3840x2160
+
+focus output eDP-1
+
+# Keybinds
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%

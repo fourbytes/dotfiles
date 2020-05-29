@@ -1,5 +1,5 @@
-for_window [app_id="term*"] border none
-for_window [app_id="Alacritty"] border none
+# for_window [app_id="term*"] border none
+# for_window [app_id="Alacritty"] border none
 
 workspace "1: term" output DP-3
 assign [app_id="term1"] workspace number 1
