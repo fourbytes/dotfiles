@@ -6,3 +6,4 @@ direnv hook fish | source
 # bind \t accept-autosuggestion
 
 fish_default_key_bindings
+

@@ -1,0 +1,14 @@
+set $focused #a093c7
+set $focusedI #ada0d3
+set $urgent #e2a478
+set $unfocused #101118
+set $background $unfocused solid_color
+
+# class                 border   bground  text     indicator child_border
+client.focused          $focused $focused #ffffff $focused $focused
+client.focused_inactive $focusedI $focusedI #ffffff $focusedI  $focusedI
+client.unfocused        $unfocused $unfocused #ffffff $unfocused $unfocused
+client.urgent           $urgent $urgent #ffffff $urgent $urgent
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000 #0C0C0C
+
+client.background       #040404

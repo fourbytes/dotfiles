@@ -1,16 +1,18 @@
+@import "theme.css";
+
 * {
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: 'SF Mono', Helvetica, Arial, sans-serif;
+    font-family: SF Mono, Helvetica, Arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background-color: #101118;
-    color: #ffffff;
+    background: @background;
+    color: @color;
     margin: 9px 0;
 }
 
@@ -21,20 +23,23 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: #202020;
+    background: @workspaces-hover-bg;
+    color: @workspaces-hover-color;
     box-shadow: inherit;
 }
 
 #workspaces button.focused {
-    color: #ada0d3;
+    background: @workspaces-focused-bg;
+    color: @workspaces-focused-color;
 }
 
 #workspaces button.urgent {
-    color: #e2a478;
+    background: @workspaces-urgent-bg;
+    color: @workspaces-urgent-color;
 }
 
 #mode {
-    background-color: #64727D;
+    background-color: @mode-bg;
 }
 
 #clock,
@@ -50,15 +55,15 @@ window#waybar {
 #mode,
 #idle_inhibitor,
 #mpd {
-    padding: 0 8px;
-    margin: 4px 4px;
-    color: #ada0d3;
+    padding: 0 6px;
+    margin: 5px 2px;
+    color: #6b7089;
     border-radius: 4px;
 }
 
 #clock {
-    color: #161821;
-    background-color: #a093c7;
+    color: @clock-color;
+    background-color: @clock-bg;
 }
 
 #battery {
