@@ -180,7 +180,7 @@ bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 
 bindsym $mod+t exec popup theme_fzf
 bindsym $mod+space exec popup fzf_run
-for_window [app_id="fzfmenu"] floating enable, sticky enable, border none
+for_window [app_id="fzfmenu"] floating enable, sticky enable
 
 
 #
