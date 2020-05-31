@@ -1,0 +1,2 @@
+#!/bin/fish
+alacritty --class fzfmenu --config-file ~/.config/alacritty/alacritty.popup.yaml -e $argv[1]

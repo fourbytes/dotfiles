@@ -7,7 +7,7 @@ set $right l
 set $uifont "SF Pro Display 14"
 set $term alacritty
 
-set $paper $HOME/papers/2.jpg
+# set $background $HOME/papers/2.jpg fill
 
 font $uifont
 
@@ -178,31 +178,22 @@ bindsym $mod+r mode "resize"
 bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 # bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
-bindsym $mod+space exec alacritty --class fzfmenu --config-file ~/.config/alacritty/alacritty_popup.yml -e fzf_run
-for_window [app_id="fzfmenu"] floating enable, sticky enable, border none
+bindsym $mod+t exec popup theme_fzf
+bindsym $mod+space exec popup fzf_run
+for_window [app_id="fzfmenu"] floating enable, sticky enable
 
 
 #
 # STYLES
 #
-set $focused #a093c7
-set $focusedI #ada0d3
-set $urgent #e2a478
-set $unfocused #101118
-
-# class                 border   bground  text     indicator child_border
-client.focused          $focused $focused #ffffff $focused $focused
-client.focused_inactive $focusedI $focusedI #ffffff $focusedI  $focusedI
-client.unfocused        $unfocused $unfocused #ffffff $unfocused $unfocused
-client.urgent           $urgent $urgent #ffffff $urgent $urgent
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000 #0C0C0C
-
-client.background       #040404
-
 titlebar_border_thickness 0
 titlebar_padding 4
 
 default_border pixel 3
+
+include $HOME/.theme/sway
+
+
 
 ## Gaps
 # gaps outer 4
@@ -212,3 +203,4 @@ default_border pixel 3
 
 include $HOME/.config/sway/config.d/*
 include $HOME/.config/sway/`hostname`
+

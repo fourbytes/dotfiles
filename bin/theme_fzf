@@ -1,0 +1,34 @@
+#!/bin/fish
+
+function select_theme
+	if test (count $argv) -lt 1
+		echo "No args."
+		exit
+	end
+
+	set theme $argv[1]
+	cd $HOME
+
+	set theme_path $HOME/.local/share/themes/$theme
+	echo "Linking new theme $new_theme."
+	unlink .theme
+	ln -s $theme_path .theme
+
+	set alacritty_theme .theme/alacritty.yaml
+	set alacritty_popup_theme $alacritty_theme
+	if test -f .theme/alacritty.popup.yaml
+		set alacritty_popup_theme .theme/alacritty.popup.yaml
+	end
+	cat .config/alacritty/alacritty.base.yaml > .config/alacritty/alacritty.yml
+	cat $alacritty_theme >> .config/alacritty/alacritty.yml
+	cat .config/alacritty/alacritty.base.popup.yaml > .config/alacritty/alacritty.popup.yaml
+	cat $alacritty_popup_theme >> .config/alacritty/alacritty.popup.yaml
+
+	set waybar_theme .config/waybar/theme.css
+	rm $waybar_theme
+	ln -s $theme_path/waybar.css $waybar_theme
+	
+	swaymsg reload
+end
+
+select_theme (ls .local/share/themes/ | fzf)
