@@ -6,3 +6,7 @@ direnv hook fish | source
 # bind \t accept-autosuggestion
 
 fish_default_key_bindings
+
+set DIR ~/.git-template
+git config --global init.templateDir {$DIR}
+pre-commit init-templatedir -t pre-commit {$DIR}
