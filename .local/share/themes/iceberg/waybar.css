@@ -5,3 +5,5 @@
 @define-color mode-bg #e27878;
 @define-color clock-bg #a093c7;
 @define-color clock-color #161821;
+@define-color battery-critical-bg #e2a478;
+@define-color battery-critical-color #161821;

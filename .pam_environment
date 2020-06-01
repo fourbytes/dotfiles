@@ -1,4 +1,4 @@
-PATH		DEFAULT=@{HOME}/bin:@{HOME}/.local/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/bin/X11:/usr/bin/X11
+PATH		DEFAULT=@{HOME}/bin:@{HOME}/.local/bin:@{HOME}/.cargo/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/bin/X11:/usr/bin/X11
 GOPATH      DEFAULT=@{HOME}/go
 
 QT_QPA_PLATFORM DEFAULT=wayland-egl

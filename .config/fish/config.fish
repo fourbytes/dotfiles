@@ -1,3 +1,9 @@
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
+
 # set -gx fish_user_paths "$HOME/bin" $fish_user_paths  
 direnv hook fish | source
 
@@ -7,6 +13,4 @@ direnv hook fish | source
 
 fish_default_key_bindings
 
-set DIR ~/.git-template
-git config --global init.templateDir {$DIR}
-pre-commit init-templatedir -t pre-commit {$DIR}
+starship init fish | source

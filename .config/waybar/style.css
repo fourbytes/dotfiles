@@ -78,6 +78,8 @@ window#waybar {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    background-color: @battery-critical-bg;
+    color: @battery-critical-color;
 }
 
 label:focus {
