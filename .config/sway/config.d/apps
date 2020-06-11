@@ -8,3 +8,5 @@ exec alacritty --class term1 -e tmux -L primary
 workspace "2: www" output DP-3
 assign [app_id="firefoxdeveloperedition"] workspace "2: www"
 exec firefox-developer-edition --class www
+
+for_window [title="Picture-in-Picture"] floating enable, sticky enable
