@@ -1,7 +1,10 @@
-@define-color background #0a0f14;
-@define-color workspaces-hover-bg #081f2d;
-@define-color workspaces-focused-color #245361;
+@define-color color #599caa;
+@define-color background #081f2d;
+@define-color workspaces-focused-color #33859d;
 @define-color workspaces-urgent-color #d26939;
+@define-color workspaces-hover-bg @background;
+@define-color workspaces-hover-color @workspaces-focused-color;
 @define-color mode-bg #edb54b;
-@define-color clock-bg #195465;
-@define-color clock-color @background;
+@define-color clock-bg #093748;
+@define-color clock-color @workspaces-focused-color;
+@define-color stats-color @workspaces-focused-color;

@@ -8,3 +8,8 @@ output HDMI-A-1 bg $background
 output HDMI-A-1 pos 2560 0 res 1920x1080
 
 focus output DP-3
+
+# Extra terminal on secondary monitor
+workspace "9: term" output HDMI-A-1
+assign [app_id="term9"] workspace number 9
+exec alacritty --class term9 -e tmux -L right 

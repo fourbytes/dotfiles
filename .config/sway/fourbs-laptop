@@ -2,7 +2,7 @@
 input "1739:30383:DELL08AF:00_06CB:76AF_Touchpad" {
     tap enabled
     natural_scroll enabled
-    scroll_factor 0.4
+    scroll_factor 0.7
     click_method clickfinger
 }
 
@@ -13,5 +13,5 @@ output eDP-1 pos 0 0 res 3840x2160
 focus output eDP-1
 
 # Keybinds
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl -n=1 set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl -n=1 set +5%

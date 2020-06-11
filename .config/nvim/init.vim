@@ -54,7 +54,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-" Plug 'whatyouhide/vim-gotham'
+Plug 'whatyouhide/vim-gotham'
 
 " ansible plugins
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }

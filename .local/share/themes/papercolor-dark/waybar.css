@@ -1,0 +1,9 @@
+@define-color background #1c1c1c;
+@define-color workspaces-hover-bg #00afaf;
+@define-color workspaces-focused-color #5fafd7;
+@define-color workspaces-urgent-color #ffaf00;
+@define-color mode-bg #00afaf;
+@define-color clock-bg #00afaf;
+@define-color clock-color #1c1c1c;
+@define-color battery-critical-bg #af005f;
+@define-color battery-critical-color #1c1c1c;

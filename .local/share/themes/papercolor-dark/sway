@@ -1,7 +1,7 @@
-set $focused #093748
-set $focusedI #093748
-set $urgent #d26939
-set $unfocused #0a0f14
+set $focused #5fafd7
+set $focusedI #00afaf
+set $urgent #ffaf00
+set $unfocused #1c1c1c
 set $background $unfocused solid_color
 
 # class                 border   bground  text     indicator child_border

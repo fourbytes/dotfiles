@@ -20,12 +20,12 @@ window#waybar {
     background-color: transparent;
     color: #ffffff;
     padding: 0 8px;
+    box-shadow: none;
 }
 
 #workspaces button:hover {
     background: @workspaces-hover-bg;
     color: @workspaces-hover-color;
-    box-shadow: inherit;
 }
 
 #workspaces button.focused {
@@ -57,7 +57,7 @@ window#waybar {
 #mpd {
     padding: 0 6px;
     margin: 5px 2px;
-    color: #6b7089;
+    color: @stats-color;
     border-radius: 4px;
 }
 
