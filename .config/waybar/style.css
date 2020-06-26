@@ -20,10 +20,14 @@ window#waybar {
 }
 
 #workspaces button {
-	font-family: SF Mono;
     background: transparent;
     color: @color;
     padding: 0 8px;
+}
+
+#workspaces button label {
+    font-family: SF Mono, Helvetica, Arial, sans-serif;
+    font-weight: 600;
 }
 
 #workspaces button:hover {
