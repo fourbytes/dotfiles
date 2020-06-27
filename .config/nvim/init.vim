@@ -42,6 +42,8 @@ else
 endif
 Plug 'kristijanhusak/defx-git'
 
+" Plug 'tpope/vim-vinegar'
+
 Plug 'dense-analysis/ale'
 
 " Use release branch (Recommend)

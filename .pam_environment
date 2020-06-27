@@ -1,10 +1,12 @@
 PATH		DEFAULT=@{HOME}/bin:@{HOME}/.local/bin:@{HOME}/.cargo/bin:@{HOME}/.yarn/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/bin/X11:/usr/bin/X11
 GOPATH      DEFAULT=@{HOME}/go
 
+EDITOR      DEFAULT=vim
+
 QT_QPA_PLATFORM DEFAULT=wayland-egl
 CLUTTER_BACKEND DEFAULT=wayland
 SDL_VIDEODRIVER DEFAULT=wayland
-GDK_BACKEND=wayland
+GDK_BACKEND DEFAULT=wayland
 MOZ_ENABLE_WAYLAND DEFAULT=1
 XDG_CURRENT_DESKTOP DEFAULT=Unity
 _JAVA_AWT_WM_NONREPARENTING DEFAULT=1
