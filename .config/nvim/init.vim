@@ -56,10 +56,11 @@ Plug 'rust-lang/rust.vim'
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-" Plug 'whatyouhide/vim-gotham'
+Plug 'whatyouhide/vim-gotham'
+Plug 'ayu-theme/ayu-vim'
 
 " ansible plugins
-Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
+" Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 
 " syntax plugins
 Plug 'cespare/vim-toml'
@@ -81,6 +82,10 @@ Plug 'tpope/vim-fugitive'
 " Plug 'airblade/vim-gitgutter'
 
 call plug#end()
+
+filetype plugin indent on
+autocmd FileType html,xml setlocal listchars-=tab:>.
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Shortcuts
 let mapleader=","
@@ -148,9 +153,6 @@ set conceallevel=1
 set pastetoggle=<F2>
 
 syntax enable
-
-autocmd FileType yaml,yml setlocal ai ts=2 sw=2 et
-autocmd FileType html,xml setlocal listchars-=tab:>.
 
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal_code_blocks = 0
@@ -442,4 +444,12 @@ map <C-l> <C-w>l
 " sudo save with w!!
 cmap w!! w !sudo tee % >/dev/null
 
+" Function to source only if file exists {
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+" }
 
+call SourceIfExists("~/.theme/theme.vim")

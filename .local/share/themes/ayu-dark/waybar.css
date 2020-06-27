@@ -1,0 +1,10 @@
+@define-color color #41466e;
+@define-color background #6994bf;
+@define-color workspaces-focused-color #01060e;
+@define-color workspaces-urgent-color #d26939;
+@define-color workspaces-hover-bg @background;
+@define-color workspaces-hover-color @workspaces-focused-color;
+@define-color mode-bg #edb54b;
+@define-color clock-bg #89a4df;
+@define-color clock-color #273747;
+@define-color stats-color #273747;

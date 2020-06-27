@@ -9,8 +9,4 @@ workspace "2: www" output DP-3
 assign [app_id="firefoxdeveloperedition"] workspace "2: www"
 exec firefox-developer-edition --class www
 
-workspace "9: term" output HDMI-A-1
-assign [app_id="term9"] workspace number 9
-exec alacritty --class term9 -e tmux -L right 
-
 for_window [title="Picture-in-Picture"] floating enable, sticky enable

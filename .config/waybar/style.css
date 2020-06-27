@@ -4,9 +4,9 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: SF Mono, Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    font-size: 14px;
+    font-family: SF Pro Display, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
     min-height: 0;
 }
 
@@ -16,16 +16,23 @@ window#waybar {
     margin: 9px 0;
 }
 
+#window {
+}
+
 #workspaces button {
-    background-color: transparent;
-    color: #ffffff;
+    background: transparent;
+    color: @color;
     padding: 0 8px;
+}
+
+#workspaces button label {
+    font-family: SF Mono, Helvetica, Arial, sans-serif;
+    font-weight: 600;
 }
 
 #workspaces button:hover {
     background: @workspaces-hover-bg;
     color: @workspaces-hover-color;
-    box-shadow: inherit;
 }
 
 #workspaces button.focused {
@@ -57,11 +64,12 @@ window#waybar {
 #mpd {
     padding: 0 6px;
     margin: 5px 2px;
-    color: #6b7089;
+    color: @stats-color;
     border-radius: 4px;
 }
 
 #clock {
+	font-weight: 700;
     color: @clock-color;
     background-color: @clock-bg;
 }
@@ -70,6 +78,12 @@ window#waybar {
 }
 
 #battery.charging {
+}
+
+@keyframes blink {
+    to {
+        background-color: transparent;
+    }
 }
 
 #battery.critical:not(.charging) {
@@ -130,8 +144,8 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-    background-color: #a093c7;
-    color: #161821;
+    background-color: @clock-bg;
+    color: @clock-color;
 }
 
 #mpd {

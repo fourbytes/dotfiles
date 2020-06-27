@@ -175,13 +175,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
-# bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
-
-bindsym $mod+t exec popup theme_fzf
-bindsym $mod+space exec popup fzf_run
-for_window [app_id="fzfmenu"] floating enable, sticky enable
-
 
 #
 # STYLES
