@@ -1,1 +1,1 @@
-alias update-all="yay -Syu --noupgrademenu --nodiffmenu --nocleanmenu --noeditmenu --noconfirm sway-git wlroots-git waybar-git greetd-git greetd-wlgreet-git"
+alias update-all="yay -Syu --noupgrademenu --nodiffmenu --nocleanmenu --noeditmenu --noconfirm sway wlroots waybar greetd greetd-wlgreet"
