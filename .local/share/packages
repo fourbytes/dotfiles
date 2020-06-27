@@ -1,0 +1,29 @@
+# 
+# Quick setup for a new system (run `yay -Sy - < ~/.local/share/packages`)
+#
+
+# Base Packages
+base
+base-devel
+clang
+openssh
+tmux
+
+# Apps
+alacritty
+firefox-developer-edition
+
+# Fonts
+noto-fonts-emoji
+ttf-hack
+
+# WM
+sway-git
+wlroots-git
+swaybg-git
+waybar
+
+# Tools
+rustup
+python
+python-pip
