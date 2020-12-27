@@ -1,0 +1,22 @@
+#! /bin/sh
+
+# Autostart
+pgrep -x sxhkd > /dev/null || sxhkd &
+picom &
+mpd &
+sh ~/.config/polybar/launch.sh 
+
+# Workspaces
+bspc monitor -d 1 2 3 4 5
+
+bsp-layout set tall 1 -- --master-size 0.5
+
+# Bspc Configs
+bspc config border_width	2
+bspc config normal_border_color \#a9b1d6
+bspc config active_border_color \#a9b1d6
+bspc config focused_border_color \#ff768c
+
+bspc config window_gap		14
+bspc config split_ratio		0.50
+

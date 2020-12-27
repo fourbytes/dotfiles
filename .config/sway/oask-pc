@@ -1,5 +1,9 @@
 ### Output configuration
 
+output DP-1 adaptive_sync on
+output DP-1 scale 1.5 bg $background
+output DP-1 pos 0 0 res 3840x2160
+
 output DP-3 adaptive_sync on
 output DP-3 scale 1.5 bg $background
 output DP-3 pos 0 0 res 3840x2160
