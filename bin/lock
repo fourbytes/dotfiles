@@ -1,0 +1,19 @@
+#!/bin/sh
+swaylock \
+	-e \
+	-S \
+	--grace 5 \
+	--fade-in 1 \
+	--clock \
+	--effect-blur 4x4 \
+	--effect-greyscale \
+	--font "SF Pro Display" \
+	--text-color eeeeee \
+	--ring-color 400880 \
+	--key-hl-color 7a20ca \
+	--indicator \
+	--ring-ver-color 7120ca \
+	--inside-color 000000aa \
+	--inside-ver-color 000000aa \
+	--inside-wrong-color 000000aa \
+	--inside-clear-color 000000aa

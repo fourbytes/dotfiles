@@ -1,0 +1,2 @@
+#!/bin/fish
+wpa_cli select_network (wpa_cli list_networks | tail +3 - | fzf -i --nth 2 | cut -f1 -)

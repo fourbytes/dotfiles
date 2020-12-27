@@ -15,3 +15,5 @@ focus output eDP-1
 # Keybinds
 bindsym XF86MonBrightnessDown exec brightnessctl -n=1 set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl -n=1 set +5%
+
+bindsym $mod+n exec popup fzf_wifi

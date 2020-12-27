@@ -30,7 +30,6 @@ Plug 'raghur/fruzzy'
 Plug 'vim-airline/vim-airline' " powerline
 Plug 'yggdroot/indentline' " vertical indent lines
 
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': ':UpdateRemotePlugins'}
 " Plug 'tpope/vim-vinegar'
 
 " Plug 'dense-analysis/ale'
@@ -194,6 +193,7 @@ endif
 " Use `[g` and `]g` to navigate diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> ,dd :Denite coc-diagnostic<CR>
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -341,6 +341,7 @@ nnoremap <silent> <leader>dg :Denite grep<cr>
 
 nmap <leader><space> <leader>ds
 
+<<<<<<< HEAD
 " Defx configuration
 " call defx#custom#option('_', {
 "             \ 'winwidth': 40,
@@ -417,6 +418,10 @@ nmap <leader><space> <leader>ds
 " 
 " nnoremap <silent> <leader>t :Defx -toggle<cr>
 nnoremap <leader>t <cmd>CHADopen<cr>
+=======
+" File explorer configuration
+nnoremap <silent> <leader>t :CocCommand explorer --toggle --sources=buffer+,file+<cr>
+>>>>>>> 02e04e3 (Updated dotfiles.)
 
 " Background colors
 let ayucolor="dark"   " for dark version of theme

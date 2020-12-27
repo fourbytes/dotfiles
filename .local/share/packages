@@ -23,6 +23,8 @@ wlroots
 swaybg-git
 swaylock-effects-git
 waybar
+sway-launcher-desktop-git
+fzf
 
 # Tools
 rustup
