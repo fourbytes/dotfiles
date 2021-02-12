@@ -2,6 +2,9 @@
 
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
+alacritty &
+firefox &
+alacritty &
 picom &
 mpd &
 sh ~/.config/polybar/launch.sh 
@@ -10,6 +13,12 @@ sh ~/.config/polybar/launch.sh
 bspc monitor -d 1 2 3 4 5
 
 bsp-layout set tall 1 -- --master-size 0.5
+bspc node @^1:/ -o 0.4 -i
+bspc node @^1:/1 -o 0.7 -p north -i
+bspc rule -a Alacritty:Alacritty -o node=@^1:^1:/1
+bspc rule -a firefox:Navigator -o node=@^1:^1:/2/1
+bspc rule -a Alacritty:Alacritty -o node=@^1:^1:/2/2
+# states/rules
 
 # Bspc Configs
 bspc config border_width	2
@@ -17,6 +26,6 @@ bspc config normal_border_color \#a9b1d6
 bspc config active_border_color \#a9b1d6
 bspc config focused_border_color \#ff768c
 
-bspc config window_gap		14
+bspc config window_gap		0
 bspc config split_ratio		0.50
 
