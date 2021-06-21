@@ -8,7 +8,7 @@ input "1739:30383:DELL08AF:00_06CB:76AF_Touchpad" {
 }
 
 # Outputs
-output eDP-1 scale 2.0 bg $background
+output eDP-1 scale 2.0 bg $HOME/papers/3.png fill
 output eDP-1 pos 0 0 res 3840x2160
 
 focus output eDP-1

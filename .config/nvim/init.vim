@@ -6,7 +6,7 @@ set nocompatible
 let g:neovide_transparency=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set guifont=Fira\ Code\ Nerd\ Font,Twemoji:h24
+set guifont=Fira\ Code\ Nerd\ Font,Twemoji:h14
 
 
 "
@@ -463,7 +463,7 @@ let g:gruvbox_contrast_dark="medium"
 " let g:gruvbox_guisp_fallback="fg"
 "colorscheme gruvbox
 " colorscheme tender
-colorscheme gruvbox
+colorscheme gotham
 " colorscheme goodwolf
 " colorscheme seoul256
 
@@ -483,7 +483,7 @@ let g:lightline = {
   \   'component_function': {
   \     'gitbranch': 'FugitiveHead'
   \   },
-  \   'colorscheme': 'gruvbox'
+  \   'colorscheme': 'gotham'
   \ }
 
 function! LightlineReload()

@@ -3,8 +3,9 @@ set $app_prefix $mod+Mod3
 bindsym --release Print exec grim -g \"$(slurp)" - | wl-copy
 # bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
+bindsym $mod+u exec neovide "--multiGrid"
 bindsym $mod+t exec popup theme_fzf
-bindsym $mod+space exec popup sway-launcher-desktop
+bindsym $mod+space exec yofi # popup sway-launcher-desktop
 for_window [app_id="fzfmenu"] floating enable, sticky enable
 
 bindsym $app_prefix+Return exec $term

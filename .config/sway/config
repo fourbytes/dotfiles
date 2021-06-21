@@ -7,9 +7,11 @@ set $right l
 set $uifont "SF Pro Display 14"
 set $term alacritty
 
-# set $background $HOME/papers/2.jpg fill
+# set $background $HOME/papers/3.png fill
 
 font $uifont
+
+
 
 ### Idle configuration
 #
