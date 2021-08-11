@@ -1,14 +1,7 @@
 # for_window [app_id="term*"] border none
 # for_window [app_id="Alacritty"] border none
 
-workspace "1: term" output DP-3
 assign [app_id="term1"] workspace number 1
 exec alacritty --class term1 -e tmux -L primary
-
-workspace "2: www" output DP-3
-assign [app_id="firefoxdeveloperedition"] workspace "2: www"
-assign [app_id="firefoxbeta"] workspace "2: www"
-assign [app_id="firefox"] workspace "2: www"
-exec firefox --class www
 
 for_window [title="Picture-in-Picture"] floating enable, sticky enable
