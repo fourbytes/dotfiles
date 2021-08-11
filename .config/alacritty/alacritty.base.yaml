@@ -44,7 +44,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: full
 
   startup_mode: Windowed
 
@@ -68,7 +68,8 @@ font:
     #   - (Linux) monospace
     #   - (Windows) Consolas
     # family: "SF Mono Powerline"
-    family: "Inconsolata for Powerline"
+    # family: "Inconsolata for Powerline"
+    family: "Menlo"
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
