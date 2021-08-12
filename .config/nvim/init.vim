@@ -6,7 +6,7 @@ set nocompatible
 let g:neovide_transparency=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set guifont=Iosevka\ Nerd\ Font,\ Apple\ Color\ Emoji:h16
+set guifont=Iosevka\ Nerd\ Font,\ Apple\ Color\ Emoji:h13
 
 "
 " Plugins
@@ -179,9 +179,17 @@ nmap <silent> gd <cmd>lua vim.lsp.buf.definition()<cr>
 nmap <silent> gy <cmd>lua vim.lsp.buf.type_definition()<cr>
 nmap <silent> gi <cmd>lua vim.lsp.buf.implementation()<cr>
 nmap <silent> gr <cmd>lua vim.lsp.buf.references()<cr>
+nmap <silent> rn <cmd>lua vim.lsp.buf.rename()<cr>
 
 nmap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<cr>
 nmap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<cr>
+
+nnoremap <leader>d :Trouble<CR>
+
+"
+" Light Bulb Code Actions
+"
+autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 
 "
 " Color schemes

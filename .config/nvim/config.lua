@@ -134,13 +134,21 @@ lspconfig.sumneko_lua.setup {
 -- 
 -- Rust tools / LSP setup
 -- 
-require('rust-tools').setup({})
-
-lspconfig.rust_analyzer.setup{
-	settings = {
-		["rust-analyzer.cargo.allFeatures"] = true
+require('rust-tools').setup({
+	server =  {
+		settings = {
+			["rust-analyzer"] = {
+				["cargo"] = {
+					["allFeatures"] = true
+				},
+				["checkOnSave"] = {
+					["enabled"] = true,
+					["command"] = "clippy"
+				}
+			}
+		}
 	}
-}
+})
 
 --
 -- Telscope Fuzzy Finder Setup

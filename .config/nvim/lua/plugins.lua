@@ -31,6 +31,7 @@ return require('packer').startup(function()
   -- Lib
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
+  use 'mfussenegger/nvim-dap'
 
   -- File Tree
   use {
@@ -46,6 +47,7 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-compe'
   use 'simrat39/symbols-outline.nvim'
   use 'folke/trouble.nvim'
+  use 'kosayoda/nvim-lightbulb'
 
   use 'editorconfig/editorconfig-vim'
 
@@ -56,8 +58,6 @@ return require('packer').startup(function()
   use 'simrat39/rust-tools.nvim'
 
   use 'jose-elias-alvarez/null-ls.nvim'
-
-  use 'mfussenegger/nvim-dap'
 
   use 'docker/docker'
   use 'skanehira/docker-compose.vim'

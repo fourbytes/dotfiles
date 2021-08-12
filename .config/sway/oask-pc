@@ -19,3 +19,7 @@ workspace 6 output DP-2
 workspace 7 output DP-2
 workspace 8 output DP-2
 
+input 1133:16511:Logitech_G502 accel_profile adaptive
+input 1133:16511:Logitech_G502 natural_scroll enabled
+input 1133:16511:Logitech_G502 pointer_accel 0.8
+
