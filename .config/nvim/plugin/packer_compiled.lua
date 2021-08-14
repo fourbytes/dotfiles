@@ -101,6 +101,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
   },
+  ["nvim-base16"] = {
+    loaded = true,
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-base16"
+  },
   ["nvim-compe"] = {
     loaded = true,
     path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-compe"

@@ -16,6 +16,8 @@ return require('packer').startup(function()
   -- Themes
   -- AYU: use 'ayu-theme/ayu-vim'
   use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  -- use 'bradcush/base16-nvim'
+  use 'RRethy/nvim-base16'
 
   -- Git
   use 'tpope/vim-fugitive'

@@ -1,14 +1,14 @@
 ### Output configuration
 
 output DP-1 adaptive_sync on
-output DP-1 pos 0 0 res 3840x2160
-output DP-1 scale 1.5 bg $background
+output DP-1 pos 0 0 res 5120x1440
+output DP-1 scale 1 bg $background
 
-output DP-2 adaptive_sync on
-output DP-2 pos 2560 0 res 3840x2160
-output DP-2 scale 1.5 bg $background
+#output DP-2 adaptive_sync on
+#output DP-2 pos 2560 0 res 3840x2160
+#output DP-2 scale 1.5 bg $background
 
-focus output DP-1
+#focus output DP-1
 
 workspace 1 output DP-1
 workspace 2 output DP-1
@@ -21,5 +21,5 @@ workspace 8 output DP-2
 
 input 1133:16511:Logitech_G502 accel_profile adaptive
 input 1133:16511:Logitech_G502 natural_scroll enabled
-input 1133:16511:Logitech_G502 pointer_accel 0.8
+input 1133:16511:Logitech_G502 pointer_accel 1
 
