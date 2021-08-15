@@ -18,12 +18,12 @@ set_color normal; echo "$LINKER"
 set_color -o; set_color cyan; echo -n "# "; echo -ne (echo "rustc flags: " | string pad -w16)
 set_color normal; echo "$RUSTFLAGS"
 echo
-for i in (seq 0 10)
+for i in (seq 0 6)
+	cargo clean
 	# touch src/main.rs
 	set total 0
-	set_color -d; echo -n "pass $i => "; set_color normal
-	cargo clean
-	cargo build 2>&1 | rg run_linker | while read -L line
+	set_color -d; echo -n (echo "pass $i => " | string pad -w12); set_color normal
+	cargo build --workspace --release 2>&1 | rg run_linker | while read -L line
 		set time (echo $line \
 			| string split -n \t \
 			| string split -n ' ')[2]
@@ -42,7 +42,7 @@ for i in $result
 	set total (math $total + $i)
 end
 set average (math $total / (count $result))
-set_color -o; set_color red; echo -ne (echo "average => " | string pad -w16)
+set_color -o; set_color red; echo -ne (echo "average => " | string pad -w12)
 set_color normal; echo "$average secs"
 echo
 echo "---"
