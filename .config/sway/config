@@ -180,6 +180,13 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+## Gaps
+# gaps outer 4
+# gaps inner 12
+# smart_gaps on
+# smart_borders on
+
+include $HOME/.config/sway/config.d/colors
 
 #
 # STYLES
@@ -189,16 +196,20 @@ titlebar_padding 4
 
 default_border pixel 3
 
-include $HOME/.theme/sway
+set $focused $base0A
+set $focusedI $base02
+set $urgent $base08
+set $unfocused $base03
+set $background $unfocused solid_color
 
+# class                 border   bground  text     indicator child_border
+client.focused          $focused $focused #ffffff $focused $focused
+client.focused_inactive $focusedI $focusedI #ffffff $focusedI  $focusedI
+client.unfocused        $unfocused $unfocused #ffffff $unfocused $unfocused
+client.urgent           $urgent $urgent #ffffff $urgent $urgent
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000 #0C0C0C
 
-
-## Gaps
-# gaps outer 4
-# gaps inner 12
-# smart_gaps on
-# smart_borders on
+client.background       $unfocused
 
 include $HOME/.config/sway/config.d/*
 include $HOME/.config/sway/`hostname`
-

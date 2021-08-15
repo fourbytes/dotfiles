@@ -194,9 +194,11 @@ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 "
 " Color schemes
 "
-" set background=dark
-" colorscheme gruvbox
-colorscheme base16-phd
+set background=dark
+let g:gruvbox_transparent_bg=0
+let g:gruvbox_contrast_dark="medium"
+colorscheme gruvbox
+" colorscheme base16-phd
 
 "
 " Status Bar

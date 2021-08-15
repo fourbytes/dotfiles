@@ -1,0 +1,20 @@
+# Commands go through bash
+shell = "fish -c '{}'"
+
+[[item]]
+file = "~/.config/sway/config.d/colors"
+template = "sway"
+subtemplate = "colors"
+hook = "swaymsg reload"
+light = false
+
+# This one uses waybar 'default' subtemplate, so it can be ommited
+[[item]]
+file = "~/.config/waybar/colors.css"
+template = "waybar"
+# Waybar uses a separate color file, so we can safely rewrite the whole file
+rewrite = true
+
+[[item]]
+file = "~/.config/alacritty/alacritty.yml"
+template = "alacritty"
