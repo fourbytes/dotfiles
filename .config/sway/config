@@ -4,7 +4,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $uifont "SF Pro Display 14"
+set $uifont "Iosevka 14"
 set $term alacritty
 
 # set $background $HOME/papers/3.png fill

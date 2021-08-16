@@ -239,6 +239,9 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 highlight NvimTreeFolderIcon guifg=#a9b665
 highlight NvimTreeOpenedFolderName guifg=#a9b665
 highlight NvimTreeOpenedFolderName guifg=#a9b665
+let g:nvim_tree_lsp_diagnostics = 1
+let g:nvim_tree_follow = 1
+let g:nvim_tree_tab_open = 1 
 
 "
 " Auto-reload vimrc on save

@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/fourbytes/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/fourbytes/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/fourbytes/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/fourbytes/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/fourbytes/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/fourbytes/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/fourbytes/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/fourbytes/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/fourbytes/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/fourbytes/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,35 +71,35 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   docker = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/docker"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/docker"
   },
   ["docker-compose.vim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/docker-compose.vim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/docker-compose.vim"
   },
   ["editorconfig-vim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/editorconfig-vim"
   },
   ["feline.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/feline.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/feline.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
   },
   ["lush.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/lush.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/lush.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
   },
   ["nvim-base16"] = {
     loaded = true,
@@ -107,87 +107,87 @@ _G.packer_plugins = {
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-dap"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-dap"
   },
   ["nvim-lightbulb"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/rust-tools.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/rust-tools.nvim"
   },
   ["rust.vim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/rust.vim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/rust.vim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
   },
   tabular = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/tabular"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/tabular"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-markdown"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/vim-markdown"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/vim-markdown"
   },
   ["vim-sensible"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/vim-sensible"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/vim-sensible"
   },
   ["vim-wakatime"] = {
     loaded = true,
-    path = "/Users/fourbytes/.local/share/nvim/site/pack/packer/start/vim-wakatime"
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/vim-wakatime"
   }
 }
 

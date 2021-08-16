@@ -4,30 +4,34 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: SF Pro Display, Helvetica, Arial, sans-serif;
+    font-family: Iosevka Aile, SF Pro Display, Helvetica, Arial, sans-serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 17px;
     min-height: 0;
 }
 
 window#waybar {
     background: @background;
     color: @color;
-    margin: 9px 0;
 }
 
 #window {
+    margin: 6px 0px;
+}
+
+#workspaces {
+    background-color: @clock-bg;
 }
 
 #workspaces button {
     background: transparent;
     color: @color;
-    padding: 0 8px;
+    padding: 0 2px;
 }
 
 #workspaces button label {
-    font-family: SF Mono, Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-family: Iosevka, SF Mono, Helvetica, Arial, sans-serif;
+    font-weight: 800;
 }
 
 #workspaces button:hover {
@@ -49,6 +53,7 @@ window#waybar {
     background-color: @mode-bg;
 }
 
+#workspaces,
 #clock,
 #battery,
 #cpu,
@@ -68,8 +73,7 @@ window#waybar {
     border-radius: 4px;
 }
 
-#clock {
-	font-weight: 700;
+#clock, #network, #tray {
     color: @clock-color;
     background-color: @clock-bg;
 }
