@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/bufferline.nvim"
+  },
   docker = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/docker"
@@ -93,9 +97,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
   },
+  indentLine = {
+    loaded = true,
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/indentLine"
+  },
   ["lush.nvim"] = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/lush.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/neoformat"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -116,6 +128,10 @@ _G.packer_plugins = {
   ["nvim-lightbulb"] = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
+  },
+  ["nvim-lsp-ts-utils"] = {
+    loaded = true,
+    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/nvim-lsp-ts-utils"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

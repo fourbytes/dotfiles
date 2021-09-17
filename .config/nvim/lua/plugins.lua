@@ -10,6 +10,9 @@ return require('packer').startup(function()
   -- Sensible defaults
   use 'tpope/vim-sensible'
 
+  -- Tab lines
+  use 'Yggdroot/indentLine'
+
   -- Wakatime
   use 'wakatime/vim-wakatime'
 
@@ -44,8 +47,18 @@ return require('packer').startup(function()
   -- Fuzzy Finder
   use 'nvim-telescope/telescope.nvim'
 
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+
+  -- Formatting
+  use 'sbdchd/neoformat'
+
   -- LSP
   use 'neovim/nvim-lspconfig'
+
+  -- use 'MunifTanjim/eslint.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use {'jose-elias-alvarez/nvim-lsp-ts-utils', requires = {'neovim/nvim-lspconfig', 'nvim-lua/plenary.nvim', 'jose-elias-alvarez/null-ls.nvim'}}
+
   use 'hrsh7th/nvim-compe'
   use 'simrat39/symbols-outline.nvim'
   use 'folke/trouble.nvim'
@@ -58,8 +71,6 @@ return require('packer').startup(function()
 
   use 'rust-lang/rust.vim'
   use 'simrat39/rust-tools.nvim'
-
-  use 'jose-elias-alvarez/null-ls.nvim'
 
   use 'docker/docker'
   use 'skanehira/docker-compose.vim'

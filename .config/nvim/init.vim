@@ -6,7 +6,7 @@ set nocompatible
 let g:neovide_transparency=1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set guifont=Iosevka\ Nerd\ Font,\ Apple\ Color\ Emoji:h13
+set guifont=Iosevka,\ Apple\ Color\ Emoji:h13
 
 "
 " Plugins
@@ -68,7 +68,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 "
 filetype plugin indent on
 autocmd FileType html,xml setlocal listchars-=tab:>.
-autocmd FileType json,yaml,javascript,typescript,typescriptreact,css setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType json,yaml,javascript,typescript,typescriptreact,css,lua setlocal ts=2 sts=2 sw=2 expandtab
 
 " nnoremap ; :
 nnoremap <leader>u :PackerSync<cr>
@@ -76,16 +76,6 @@ nnoremap <leader>v :edit $MYVIMRC<cr>
 
 " Don't bother loading netrw
 let loaded_netrwPlug = 1
-
-if has('termguicolors')
-  set termguicolors
-endif
-
-" Correct RGB escape codes for vim inside tmux
-if !has('nvim') && $TERM ==# 'screen-256color'
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
 
 " Cargo
 nnoremap <silent> <leader>cc :Cargo check<cr>
@@ -125,36 +115,6 @@ function ReactComponentTemplate()
     endif
 endfunction
 
-if has("autocmd")
-endif
-
-"
-" Treesitter Config
-"
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c" },  -- list of language that will be disabled
-  },
-  textobjects = {
-    select = {
-      enable = true,
-      keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = "@class.inner",
-        ["ab"] = "@block.outer",
-        ["ib"] = "@block.inner",
-      },
-    },
-  }
-}
-EOF
-
 "
 " Terminal
 "
@@ -186,6 +146,8 @@ nmap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<cr>
 
 nnoremap <leader>d :Trouble<CR>
 
+nnoremap <leader>cr :CargoReload<CR>
+
 "
 " Light Bulb Code Actions
 "
@@ -194,18 +156,13 @@ autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 "
 " Color schemes
 "
-set background=dark
 let g:gruvbox_transparent_bg=0
 let g:gruvbox_contrast_dark="medium"
-colorscheme gruvbox
+set background=dark
 " colorscheme base16-phd
+colorscheme gruvbox
 
-"
-" Status Bar
-"
-lua require('gitsigns').setup()
-lua require('feline').setup()
-source ~/.config/nvim/config.lua
+lua require('config.setup')
 
 "
 " Completion
@@ -233,7 +190,23 @@ nnoremap <leader>t :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
-set termguicolors " this variable must be enabled for colors to be applied properly
+"
+" Bufferline
+"
+
+" These commands will navigate through buffers in order regardless of which mode you are using
+" e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
+nnoremap <silent>]b :BufferLineCycleNext<CR>
+nnoremap <silent>[b :BufferLineCyclePrev<CR>
+
+" These commands will move the current buffer backwards or forwards in the bufferline
+nnoremap <silent><mymap> :BufferLineMoveNext<CR>
+nnoremap <silent><mymap> :BufferLineMovePrev<CR>
+
+" These commands will sort buffers by directory, language, or a custom criteria
+nnoremap <silent>be :BufferLineSortByExtension<CR>
+nnoremap <silent>bd :BufferLineSortByDirectory<CR>
+nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_a, buf_b) return buf_a.id < buf_b.id end)<CR>
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guifg=#a9b665
@@ -254,4 +227,5 @@ if !exists('*ReloadVimrc')
        lua require('feline').reset_highlights()
    endfun
 endif
-autocmd! BufWritePost ~/.config/nvim/* call ReloadVimrc()
+
+nnoremap <silent> <leader>R :call ReloadVimrc()<cr>
