@@ -177,10 +177,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
   },
-  tabular = {
-    loaded = true,
-    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/tabular"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/telescope.nvim"
@@ -192,10 +188,6 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/vim-fugitive"
-  },
-  ["vim-markdown"] = {
-    loaded = true,
-    path = "/home/fourbytes/.local/share/nvim/site/pack/packer/start/vim-markdown"
   },
   ["vim-sensible"] = {
     loaded = true,

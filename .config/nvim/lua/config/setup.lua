@@ -12,25 +12,25 @@ end
 vim.opt.termguicolors = true
 
 -- Bufferline
-require("config.bufferline");
+bufferline = require("config.bufferline");
 
 -- Autocomplete
-require('config.autocomplete');
+autocomplete = require('config.autocomplete');
 
 -- Status Bar
-require("config.statusline");
+statusline = require("config.statusline");
 
 -- Fuzzy Finder
-require("config.telescope");
+telescope = require("config.telescope");
 
 -- LSP
-require("config.lsp");
+lsp = require("config.lsp");
 
 -- File tree
-require("config.filetree");
+filetree = require("config.filetree");
 
 -- Trouble (Diagnostics Quickfix)
 require("trouble").setup {}
 
 -- Treesitter
-require("config.treesitter");
+treesitter = require("config.treesitter");

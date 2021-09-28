@@ -66,9 +66,6 @@ return require('packer').startup(function()
 
   use 'editorconfig/editorconfig-vim'
 
-  use 'godlygeek/tabular'
-  use 'plasticboy/vim-markdown'
-
   use 'rust-lang/rust.vim'
   use 'simrat39/rust-tools.nvim'
 

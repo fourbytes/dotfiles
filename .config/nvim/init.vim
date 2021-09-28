@@ -68,7 +68,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 "
 filetype plugin indent on
 autocmd FileType html,xml setlocal listchars-=tab:>.
-autocmd FileType json,yaml,javascript,typescript,typescriptreact,css,lua setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType json,yaml,javascript,typescript,typescriptreact,css,lua,graphql setlocal ts=2 sts=2 sw=2 expandtab
 
 " nnoremap ; :
 nnoremap <leader>u :PackerSync<cr>
@@ -124,10 +124,15 @@ tnoremap <Esc> <C-\><C-n>
 " Fuzzy Finder (Telescope)
 "
 
+" Finders
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+nnoremap <leader>fs <cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>
+
+" Pickers
 nnoremap <leader>ca <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
 
 "
@@ -212,9 +217,6 @@ nnoremap <silent><mymap> :lua require'bufferline'.sort_buffers_by(function (buf_
 highlight NvimTreeFolderIcon guifg=#a9b665
 highlight NvimTreeOpenedFolderName guifg=#a9b665
 highlight NvimTreeOpenedFolderName guifg=#a9b665
-let g:nvim_tree_lsp_diagnostics = 1
-let g:nvim_tree_follow = 1
-let g:nvim_tree_tab_open = 1 
 
 "
 " Auto-reload vimrc on save
