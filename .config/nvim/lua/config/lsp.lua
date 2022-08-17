@@ -1,9 +1,13 @@
 local lspconfig = require'lspconfig'
 
 -- Generic LSP
-local null_ls = require("null-ls")
-null_ls.config {}
-lspconfig['null-ls'].setup {}
+require("null-ls").setup({
+    sources = {
+        require("null-ls").builtins.formatting.stylua,
+        require("null-ls").builtins.diagnostics.eslint,
+        require("null-ls").builtins.completion.spell,
+    },
+})
 
 -- Typescript / ESLint
 lspconfig.tsserver.setup {

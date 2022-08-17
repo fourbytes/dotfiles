@@ -178,7 +178,7 @@ table.insert(components.active[2], {
 -- diagnosticWarn
 table.insert(components.active[2], {
   provider = 'diagnostic_warnings',
-  enabled = function() return lsp.diagnostics_exist('Warning') end,
+  enabled = function() return lsp.diagnostics_exist('warn') end,
   hl = {
     fg = 'yellow',
     style = 'bold'
@@ -196,7 +196,7 @@ table.insert(components.active[2], {
 -- diagnosticInfo
 table.insert(components.active[2], {
   provider = 'diagnostic_info',
-  enabled = function() return lsp.diagnostics_exist('Information') end,
+  enabled = function() return lsp.diagnostics_exist('Info') end,
   hl = {
     fg = 'skyblue',
     style = 'bold'

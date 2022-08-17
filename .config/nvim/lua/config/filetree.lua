@@ -53,11 +53,13 @@ require'nvim-tree'.setup {
   hijack_netrw        = true,
   open_on_setup       = false,
   ignore_ft_on_setup  = {},
-  auto_close          = false,
   open_on_tab         = false,
   hijack_cursor       = false,
   update_cwd          = false,
-  lsp_diagnostics     = true,
+  diagnostics         = {
+    enable      = true,
+    show_on_dirs = true
+  },
   update_focused_file = {
     enable      = true,
     update_cwd  = false,
@@ -70,7 +72,6 @@ require'nvim-tree'.setup {
   view = {
     width = 30,
     side = 'left',
-    auto_resize = false,
     mappings = {
       custom_only = false,
       list = {}

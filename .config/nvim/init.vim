@@ -156,7 +156,7 @@ nnoremap <leader>cr :CargoReload<CR>
 "
 " Light Bulb Code Actions
 "
-autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
+" autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 
 "
 " Color schemes
