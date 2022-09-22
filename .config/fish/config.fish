@@ -14,3 +14,8 @@ direnv hook fish | source
 fish_default_key_bindings
 
 starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/home/fourbytes/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
