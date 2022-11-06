@@ -48,5 +48,13 @@ require('telescope').setup{
     lsp_dynamic_workspace_symbols = {
       theme = "dropdown"
     }
+  },
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {
+      }
+    }
   }
 }
+
+require('telescope').load_extension("ui-select")

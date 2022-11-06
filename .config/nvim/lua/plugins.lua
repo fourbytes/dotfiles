@@ -17,6 +17,8 @@ return require('packer').startup(function()
   -- Sensible defaults
   use 'tpope/vim-sensible'
 
+  use 'dcharbon/vim-flatbuffers'
+
   -- Tab lines
   use 'Yggdroot/indentLine'
 
@@ -53,6 +55,7 @@ return require('packer').startup(function()
 
   -- Fuzzy Finder
   use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
@@ -66,7 +69,14 @@ return require('packer').startup(function()
   use 'jose-elias-alvarez/null-ls.nvim'
   use {'jose-elias-alvarez/nvim-lsp-ts-utils', requires = {'neovim/nvim-lspconfig', 'nvim-lua/plenary.nvim', 'jose-elias-alvarez/null-ls.nvim'}}
 
-  use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
+
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
   use 'simrat39/symbols-outline.nvim'
   use 'folke/trouble.nvim'
   use 'kosayoda/nvim-lightbulb'

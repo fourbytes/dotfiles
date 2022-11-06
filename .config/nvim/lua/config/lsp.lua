@@ -9,6 +9,8 @@ require("null-ls").setup({
     },
 })
 
+lspconfig.pyright.setup {}
+
 -- Typescript / ESLint
 lspconfig.tsserver.setup {
   on_attach = function(client, bufnr)

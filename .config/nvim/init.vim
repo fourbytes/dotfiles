@@ -133,7 +133,7 @@ nnoremap <leader>h <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>fs <cmd>lua require('telescope.builtin').lsp_dynamic_workspace_symbols()<cr>
 
 " Pickers
-nnoremap <leader>ca <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
+nnoremap <leader>ca <cmd>lua vim.lsp.buf.code_action()<cr>
 
 "
 " LSP
@@ -146,8 +146,8 @@ nmap <silent> gi <cmd>lua vim.lsp.buf.implementation()<cr>
 nmap <silent> gr <cmd>lua vim.lsp.buf.references()<cr>
 nmap <silent> rn <cmd>lua vim.lsp.buf.rename()<cr>
 
-nmap <silent> ]g <cmd>lua vim.lsp.diagnostic.goto_next()<cr>
-nmap <silent> [g <cmd>lua vim.lsp.diagnostic.goto_prev()<cr>
+nmap <silent> ]g <cmd>lua vim.diagnostic.goto_next()<cr>
+nmap <silent> [g <cmd>lua vim.diagnostic.goto_prev()<cr>
 
 nnoremap <leader>d :Trouble<CR>
 
@@ -176,12 +176,6 @@ set completeopt=menuone,noselect
 
 " Avoid showing message extra message when using completion
 set shortmess+=c
-
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
-inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 "
 " Symbol Tree
